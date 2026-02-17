@@ -3,7 +3,7 @@ const fullName = 'Malcolm Abbott';
 const isCool = true;
 const totalPets = 1;
 const empty = null;
-let nothing = undefined;
+const nothing = undefined;
 const quickLogs = [fullName, isCool, totalPets, empty, nothing];
 function quickLogger(iterable) {
   iterable.forEach((element) => {
@@ -25,11 +25,6 @@ function quickLogger(iterable) {
         break;
     }
     console.log(`Element type: ${typeof element}`);
-    // if (typeof element === 'string') console.log(`Full Name: ${element}`);
-    // if (typeof element === 'boolean') console.log(`Is cool: ${element}`);
-    // if (typeof element === 'number')
-    //   console.log(`Total Number of Pets: ${element}`);
-    // console.log(typeof element);
   });
 }
 quickLogger(quickLogs);

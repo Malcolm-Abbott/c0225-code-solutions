@@ -30,12 +30,6 @@ function quickLogger(iterable: any[]): void {
     }
 
     console.log(`Element type: ${typeof element}`);
-
-    // if (typeof element === 'string') console.log(`Full Name: ${element}`);
-    // if (typeof element === 'boolean') console.log(`Is cool: ${element}`);
-    // if (typeof element === 'number')
-    //   console.log(`Total Number of Pets: ${element}`);
-    // console.log(typeof element);
   });
 }
 
