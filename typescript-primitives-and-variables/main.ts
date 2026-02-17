@@ -34,3 +34,4 @@ function quickLogger(iterable: any[]): void {
 }
 
 quickLogger(quickLogs);
+// having trouble committing

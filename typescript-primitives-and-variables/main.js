@@ -28,3 +28,4 @@ function quickLogger(iterable) {
   });
 }
 quickLogger(quickLogs);
+// having trouble committing
