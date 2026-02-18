@@ -20,6 +20,3 @@ const applePen: string = `${fruit}${item}`;
 console.log('I have a', item);
 console.log('I have an', fruit);
 console.log(applePen);
-console.log(
-  'fixing empty commit, second time happening for some reason I do not yet understand'
-);
