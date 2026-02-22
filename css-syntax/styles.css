@@ -1,0 +1,32 @@
+body {
+  color: #090302;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 0.0625rem solid black;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+#html {
+  color: red;
+}
+
+#css {
+  color: green;
+}
+
+#js {
+  color: blue;
+}
