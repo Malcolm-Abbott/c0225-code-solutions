@@ -1,0 +1,90 @@
+.row {
+  display: flex;
+}
+
+header {
+  padding-inline: 3rem;
+  color: #b9b9b9;
+  box-shadow: 0 4px 6px -6px grey;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin-top: 0;
+}
+
+.col-one-half {
+  flex-basis: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+.blue-logo {
+  padding: 1rem;
+}
+
+.blue-logo-wrapper {
+  max-width: 10rem;
+}
+
+.col-one-fifth {
+  flex-basis: 20%;
+}
+
+.center-one-fifth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #b9b9b9;
+}
+
+.contact-link {
+  color: #fff;
+  background-color: #294464;
+  padding: 0.75rem;
+  border-radius: 0.35rem;
+}
+
+.hero-container {
+  margin-top: 8rem;
+  margin-inline: 3rem;
+  position: relative;
+  display: flex;
+}
+
+.hero-gradient {
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  min-height: 15rem;
+  max-width: 33rem;
+  top: 5rem;
+  color: #fff;
+  padding-inline: 1rem;
+}
+
+.hero-button {
+  color: #fff;
+  background-color: #294464;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.35rem;
+  border: 1px solid #294464;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+div.hero-text > p {
+  line-height: 1.75;
+}
