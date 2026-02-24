@@ -6,7 +6,6 @@ header {
   padding-inline: 3rem;
   color: #b9b9b9;
   box-shadow: 0 4px 6px -6px grey;
-  position: fixed;
   width: 100%;
   top: 0;
   margin-top: 0;
@@ -21,7 +20,10 @@ img {
 }
 
 .blue-logo {
-  padding: 1rem;
+  padding-left: 0;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 .blue-logo-wrapper {
@@ -87,4 +89,71 @@ a {
 
 div.hero-text > p {
   line-height: 1.75;
+}
+
+.locations-container {
+  background-color: #fafafa;
+  width: 100%;
+  color: #6e6e6e;
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  padding-inline: 3rem;
+  padding-bottom: 5rem;
+  box-shadow: 0 4px 6px -6px grey;
+}
+
+.locations-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.locations-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+div.locations-title > p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.schedule-container {
+  margin-inline: 3rem;
+}
+
+div.schedule-container div {
+  min-height: 7rem;
+}
+
+.schedule-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.schedule-text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  color: #6e6e6e;
+}
+
+div.schedule-text h3 {
+  margin: 0;
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+div.schedule-text p {
+  margin-top: 0.5rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  flex-basis: 100%;
 }
