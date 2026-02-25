@@ -3,12 +3,13 @@
 }
 
 header {
-  padding-inline: 8rem;
+  padding: 1rem 8rem;
   color: #b9b9b9;
   box-shadow: 0 4px 6px -6px grey;
   width: 100%;
   top: 0;
   margin-top: 0;
+  font-size: 1.25rem;
 }
 
 .col-one-half {
@@ -48,8 +49,17 @@ a {
 .contact-link {
   color: #fff;
   background-color: #294464;
-  padding: 0.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 0.35rem;
+  letter-spacing: 0.05rem;
+}
+
+.contact-link:hover {
+  border: 2px solid #21364f;
+}
+
+.contact-link:active {
+  border: 2px solid #fff;
 }
 
 .hero-container {
@@ -71,20 +81,32 @@ a {
 .hero-text {
   position: absolute;
   min-height: 15rem;
-  max-width: 33rem;
+  max-width: 60%;
   top: 5rem;
   color: #fff;
   padding-inline: 1rem;
+  padding: 8rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-button {
   color: #fff;
   background-color: #294464;
-  padding: 0.75rem 2.5rem;
+  padding: 1.5rem 4.5rem;
   border-radius: 0.35rem;
   border: 1px solid #294464;
   margin-top: 1rem;
   cursor: pointer;
+  font-size: 2rem;
+}
+
+.hero-button:hover {
+  border: 2px solid #21364f;
+}
+
+.hero-button:active {
+  border: 2px solid #fff;
 }
 
 div.hero-text > p {
@@ -102,9 +124,17 @@ div.hero-text > p {
   box-shadow: 0 4px 6px -6px grey;
 }
 
+div.locations-container p {
+  font-size: 1.15rem;
+}
+
 .locations-title {
   text-align: center;
   margin-bottom: 4rem;
+}
+
+div.locations-title > h1 {
+  margin-bottom: 1rem;
 }
 
 .locations-text {
@@ -112,6 +142,7 @@ div.hero-text > p {
   justify-content: center;
   align-items: center;
   height: 3rem;
+  font-size: 1.15rem;
 }
 
 .col-full {
@@ -124,7 +155,7 @@ div.locations-title > p {
 }
 
 .schedule-container {
-  margin-inline: 8rem;
+  margin: 4.5rem 8rem;
 }
 
 div.schedule-container div {
@@ -143,7 +174,7 @@ div.schedule-container div {
   color: #6e6e6e;
 }
 
-div.schedule-text h3 {
+div.schedule-text h1 {
   margin: 0;
   flex-basis: 100%;
   display: flex;
@@ -156,6 +187,7 @@ div.schedule-text p {
   margin-bottom: 0;
   margin-left: 0;
   flex-basis: 100%;
+  font-size: 1.15rem;
 }
 
 .col-one-fourth {
@@ -163,7 +195,7 @@ div.schedule-text p {
 }
 
 footer {
-  margin-bottom: 5rem;
+  font-size: 1.15rem;
 }
 
 footer div.col-one-half {
@@ -180,6 +212,8 @@ footer div.col-one-half > p {
 footer > div:first-child {
   background-color: #525351;
   color: #fff;
+  border: 1px solid #525351;
+  box-shadow: 0 4px 6px -6px #525351;
 }
 
 footer img {
