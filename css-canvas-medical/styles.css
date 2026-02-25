@@ -3,7 +3,7 @@
 }
 
 header {
-  padding-inline: 3rem;
+  padding-inline: 8rem;
   color: #b9b9b9;
   box-shadow: 0 4px 6px -6px grey;
   width: 100%;
@@ -54,7 +54,7 @@ a {
 
 .hero-container {
   margin-top: 8rem;
-  margin-inline: 3rem;
+  margin-inline: 8rem;
   position: relative;
   display: flex;
 }
@@ -124,7 +124,7 @@ div.locations-title > p {
 }
 
 .schedule-container {
-  margin-inline: 3rem;
+  margin-inline: 8rem;
 }
 
 div.schedule-container div {
@@ -156,4 +156,75 @@ div.schedule-text p {
   margin-bottom: 0;
   margin-left: 0;
   flex-basis: 100%;
+}
+
+.col-one-fourth {
+  flex-basis: 25%;
+}
+
+footer {
+  margin-bottom: 5rem;
+}
+
+footer div.col-one-half {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+footer div.col-one-half > h3,
+footer div.col-one-half > p {
+  flex-basis: 100%;
+}
+
+footer > div:first-child {
+  background-color: #525351;
+  color: #fff;
+}
+
+footer img {
+  padding: 3rem;
+}
+
+.white-logo-wrapper {
+  display: flex;
+  max-width: 17rem;
+  margin-inline: 4.85rem;
+}
+
+.demographics {
+  margin-inline: 8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+div.footer-links a {
+  flex-basis: 100%;
+  color: #fff;
+}
+
+footer div.col-one-fourth {
+  padding-top: 2.5rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+footer > div.row {
+  padding-bottom: 6rem;
+}
+
+.light-footer {
+  background-color: #fafafa;
+  min-height: 7rem;
+  padding-inline: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+div.light-footer a {
+  color: #6e6e6e;
+  margin-right: 2rem;
 }
