@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fef9f1;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.bulb {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 8rem;
+  background-color: #faea84;
+  box-shadow: 0 0 10px #fff, /* Core brightness */ 0 0 30px #ff0,
+    /* Middle glow */ 0 0 60px #fc0,
+    /* Soft outer spread */ 0 0 100px rgba(255, 255, 0, 0.3);
+}
+
+.dark {
+  background-color: #595858;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+    /* Sharp core reflection */ 0 0 25px rgba(255, 255, 255, 0.2),
+    /* Medium bloom */ 0 0 50px rgba(89, 88, 88, 0.6),
+    /* Glow matching your base grey */ inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-bg {
+  background-color: #232425;
+}
