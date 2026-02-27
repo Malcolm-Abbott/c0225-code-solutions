@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.current {
+  border-bottom: 3px solid black;
+  padding-bottom: 0.1rem;
+}
+
+.completed {
+  color: #1acd1d;
+  border-bottom: none;
+}
+
+.incorrect {
+  color: red;
+  border-bottom: 3px solid red;
+}
