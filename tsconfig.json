@@ -1,3 +1,7 @@
 {
-  "extends": "./node_modules/@learningfuze/lfz-config/config/tsconfig.json"
+  "extends": "./node_modules/@learningfuze/lfz-config/config/tsconfig.json",
+  "watchOptions": {
+    "watchFile": "fixedpollinginterval",
+    "watchDirectory": "fixedpollinginterval"
+  }
 }
