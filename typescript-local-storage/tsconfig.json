@@ -6,9 +6,5 @@
   "compilerOptions": {
     "noEmit": false,
     "moduleDetection": "legacy"
-  },
-  "watchOptions": {
-    "watchFile": "fixedpollinginterval",
-    "watchDirectory": "fixedpollinginterval"
   }
 }
