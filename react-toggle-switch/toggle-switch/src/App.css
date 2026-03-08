@@ -1,0 +1,34 @@
+#root {
+  width: 100%;
+  max-width: 42rem; /* 672px – comfortable reading width on small/medium screens */
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Tablet: a bit more room, slightly more padding */
+@media (width >= 640px) {
+  #root {
+    max-width: 48rem; /* 768px */
+    padding: 1.5rem;
+  }
+}
+
+/* Small desktop: standard content width */
+@media (width >= 1024px) {
+  #root {
+    max-width: 60rem; /* 960px */
+    padding: 2rem;
+  }
+}
+
+/* Large desktop: optional wider container if you want more space */
+@media (width >= 1280px) {
+  #root {
+    max-width: 72rem; /* 1152px */
+  }
+}
