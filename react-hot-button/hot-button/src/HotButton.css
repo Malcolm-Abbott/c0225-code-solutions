@@ -1,0 +1,43 @@
+.hot-button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.hot-button:hover {
+  transform: scale(1.05);
+}
+
+.cold {
+  background-color: #351c75;
+  color: #fff;
+}
+
+.cool {
+  background-color: #674ea7;
+  color: #fff;
+}
+
+.tepid {
+  background-color: #e06666;
+  color: #fff;
+}
+
+.warm {
+  background-color: #f6b26b;
+  color: black;
+}
+
+.hot {
+  background-color: #ff0;
+  color: black;
+}
+
+.nuclear {
+  background-color: #fff;
+  color: red;
+  font-size: 2rem;
+}
