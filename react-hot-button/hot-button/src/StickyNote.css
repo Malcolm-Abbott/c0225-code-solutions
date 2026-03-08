@@ -1,0 +1,16 @@
+.sticky-note {
+  width: 8rem;
+  height: 5rem;
+  background-color: #ffff80;
+  border-radius: 5rem;
+  margin-left: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
