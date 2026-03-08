@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-inline: 1.5rem;
+  min-height: 100vh;
+  min-height: 100dvh; /* adapts when devtools/console open (overrides above in supporting browsers) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
