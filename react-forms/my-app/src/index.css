@@ -1,0 +1,63 @@
+@import url('tailwindcss');
+
+body {
+  @apply bg-amber-100;
+  @apply h-screen;
+
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  @apply bg-amber-50;
+  @apply w-4/5;
+  @apply mx-auto;
+  @apply my-auto;
+  @apply flex justify-center items-center;
+  @apply flex-col;
+  @apply gap-4;
+  @apply p-4;
+  @apply rounded-lg;
+  @apply shadow-md;
+}
+
+form {
+  @apply w-full mx-auto bg-stone-50 rounded-md shadow-md py-15;
+
+  max-width: 20rem; /* 320px – base, below 640px */
+  padding-inline: 0.75rem; /* p-3 – base */
+
+  @media (width >= 640px) {
+    max-width: 24rem; /* 384px – sm */
+    padding-inline: 2rem;
+
+    @apply py-18;
+  }
+
+  @media (width >= 768px) {
+    max-width: 28rem; /* 448px – md */
+    padding-inline: 4rem;
+
+    @apply py-21;
+  }
+
+  @media (width >= 1024px) {
+    max-width: 32rem; /* 512px – lg */
+    padding-inline: 6rem;
+
+    @apply py-24;
+  }
+}
+
+input {
+  @apply border border-gray-300 rounded-md p-2 max-w-full;
+}
+
+button {
+  @apply bg-blue-500 text-white rounded-md p-2 border-2 border-transparent;
+  @apply hover:bg-blue-400 hover:border-blue-600;
+  @apply active:bg-blue-700 active:border-blue-800 active:scale-[0.98];
+}
