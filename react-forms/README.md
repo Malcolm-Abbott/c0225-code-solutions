@@ -116,3 +116,68 @@ This exercise compared **uncontrolled** and **controlled** forms in React, and e
 
 - **`FormData` + `Object.fromEntries`**:
   - Great combo to turn a form submission into a plain JavaScript object in one step.
+
+---
+
+### Extra functionality & deeper dive (second session)
+
+This section captures additional patterns and refinements added later, beyond the core forms.
+
+#### 1. Controlled vs. uncontrolled – deeper understanding
+
+- **Uncontrolled form** (`RegistrationFormUncontrolled`):
+
+  - Inputs are managed by the **browser**, not React.
+  - On submit, values are read with `FormData`, then `form.reset()` returns the DOM to its default state.
+  - You can still add **React state purely for validation UI** around an otherwise uncontrolled input.
+
+- **Controlled form** (`RegistrationFormControlled`):
+  - Inputs are driven entirely by **React state** (`value` + `onChange`).
+  - `form.reset()` does not clear visible values unless you also reset state.
+  - The idiomatic way to clear a controlled form is to **reset the state** on submit.
+
+#### 2. Sharing a password error component between forms
+
+- Initially, the password error component was **form-specific**:
+  - It received `password` and `isFocused` and performed its own validation logic inside.
+- It was refactored into a **reusable, presentation-only** component:
+  - It now accepts a single `errorMessage` prop.
+  - Both the controlled and uncontrolled forms compute their own error strings and pass them down.
+- This cleanly separates:
+  - **Validation rules** (inside each form) from
+  - **Display of the error** (inside the shared component).
+
+#### 3. Designing clear validation state (`isTouched` + `password`)
+
+- **State per password field**:
+
+  - `password`: current value of the input.
+  - `isTouched`: whether the user has interacted with the field.
+
+- **Error logic**:
+
+  ```ts
+  if (password.length > 0 && password.length < 8) {
+    // "Password must be at least 8 characters long"
+  } else if (isTouched && password.length === 0) {
+    // "Password is required"
+  } else {
+    // no error
+  }
+  ```
+
+- **Behavior**:
+  - Empty + **not** touched → **no message**.
+  - Empty + touched → **“Password is required”**.
+  - Non‑empty but too short → **length message**, regardless of `isTouched`.
+
+This logic is easy to read and can be applied consistently in both the controlled and uncontrolled forms (they only differ in how `password` is sourced).
+
+#### 4. State vs. local variables in uncontrolled forms
+
+- A brief experiment tried to reuse the error component in the uncontrolled form via a plain `let password` variable updated in an event handler.
+- The issue:
+  - Component functions run again on every render, so `let password = ''` was **reset each render**.
+  - Updates to that variable did **not** persist across renders, and the error component often saw an empty string.
+- Takeaway:
+  - Any value that must survive re-renders and drive UI needs to live in **React state or refs**, not in ordinary local variables.
