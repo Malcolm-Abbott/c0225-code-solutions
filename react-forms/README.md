@@ -181,3 +181,14 @@ This logic is easy to read and can be applied consistently in both the controlle
   - Updates to that variable did **not** persist across renders, and the error component often saw an empty string.
 - Takeaway:
   - Any value that must survive re-renders and drive UI needs to live in **React state or refs**, not in ordinary local variables.
+
+#### 5. Button click vs. Enter key – blur behavior and submit
+
+- An interesting quirk appeared around when the password error message cleared:
+  - Clicking the **Register** button cleared the error message.
+  - Pressing **Enter** in the password field did **not** clear it.
+- Reason:
+  - On button click, the password input **blurs first**, so its `onBlur` handler runs before `onSubmit`, resetting `isTouched` to `false`. After submit, `password === ''` and `isTouched === false`, so no message is shown.
+  - On Enter from the password field, the input does **not blur** before submit, so `onBlur` never runs. `isTouched` stays `true`, and after submit `password === ''` and `isTouched === true`, so the “required” message remained.
+- Fix:
+  - Explicitly resetting `isTouched` in the submit handler (`handleSubmit`) makes both paths consistent: after a successful submit, the password is cleared and the field is considered “not touched,” so no error message lingers.

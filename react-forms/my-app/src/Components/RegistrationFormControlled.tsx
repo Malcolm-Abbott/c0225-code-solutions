@@ -1,6 +1,6 @@
 import type React from 'react';
 import { useState } from 'react';
-import { PasswordErrorMessageControlled } from './PasswordErrorMessageControlled';
+import { PasswordErrorMessage } from './PasswordErrorMessage';
 
 export function RegistrationFormControlled() {
   const [username, setUsername] = useState('');
@@ -12,6 +12,7 @@ export function RegistrationFormControlled() {
     console.log(username, password);
     setUsername('');
     setPassword('');
+    setIsTouched(false);
   }
 
   function handlePasswordChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -54,7 +55,7 @@ export function RegistrationFormControlled() {
           onBlur={() => setIsTouched(false)}
         />
       </div>
-      <PasswordErrorMessageControlled errorMessage={passwordErrorMessage} />
+      <PasswordErrorMessage errorMessage={passwordErrorMessage} />
       <button type="submit" className="cursor-pointer">
         Register
       </button>

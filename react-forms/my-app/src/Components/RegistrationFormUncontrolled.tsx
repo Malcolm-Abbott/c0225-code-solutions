@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PasswordErrorMessageControlled } from './PasswordErrorMessageControlled';
+import { PasswordErrorMessage } from './PasswordErrorMessage';
 
 export function RegistrationFormUncontrolled() {
   const [password, setPassword] = useState('');
@@ -26,6 +26,7 @@ export function RegistrationFormUncontrolled() {
     const username = (formData.get('username') ?? '') as string;
     const password = (formData.get('password') ?? '') as string;
     console.log(username, password);
+    setIsTouched(false);
     form.reset();
   }
 
@@ -50,7 +51,7 @@ export function RegistrationFormUncontrolled() {
           onBlur={() => setIsTouched(false)}
         />
       </div>
-      <PasswordErrorMessageControlled errorMessage={passwordErrorMessage} />
+      <PasswordErrorMessage errorMessage={passwordErrorMessage} />
       <button type="submit" className="cursor-pointer">
         Register
       </button>

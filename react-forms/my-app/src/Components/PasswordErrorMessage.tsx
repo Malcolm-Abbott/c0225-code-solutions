@@ -2,7 +2,7 @@ interface PasswordErrorMessageProps {
   errorMessage: string;
 }
 
-export function PasswordErrorMessageControlled({
+export function PasswordErrorMessage({
   errorMessage,
 }: PasswordErrorMessageProps) {
   if (!errorMessage) {
