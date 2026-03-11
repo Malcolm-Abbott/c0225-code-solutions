@@ -1,0 +1,75 @@
+@import url('tailwindcss');
+
+/* Royal purple → light purple → gold palette */
+
+body {
+  @apply bg-stone-900 flex items-center justify-center min-h-screen;
+
+  min-height: 100dvh; /* visible viewport on mobile (avoids address-bar overflow) */
+  padding: 1.5rem 1rem; /* spacing from viewport edges = no overflow from #root margin */
+  box-sizing: border-box;
+}
+
+#root {
+  @apply flex flex-wrap items-center justify-center gap-y-4 p-12 rounded-xl;
+  @apply bg-amber-200; /* gold “bezel” – .stopwatch-panel is the face under the glass */
+  @apply w-full min-h-0;
+
+  max-width: min(24rem, 100vw - 2rem);
+
+  /* Card lift: border + glow + drop shadow (stone to match body) */
+  box-shadow: 0 0 0 1px rgb(28 25 23 / 0.3), 0 0 32px 8px rgb(28 25 23 / 0.4),
+    0 12px 40px -8px rgb(0 0 0 / 0.5), 0 24px 64px -16px rgb(28 25 23 / 0.5),
+    inset 0 1px 0 rgb(255 255 255 / 0.1);
+
+  @media (width >= 640px) {
+    max-width: min(24rem, 100vw - 2rem);
+  }
+
+  @media (width >= 768px) {
+    max-width: min(28rem, 100vw - 2rem);
+  }
+
+  @media (width >= 1024px) {
+    max-width: min(32rem, 100vw - 2rem);
+  }
+
+  @media (width >= 1280px) {
+    max-width: min(36rem, 100vw - 2rem);
+  }
+
+  @media (width >= 1536px) {
+    max-width: min(42rem, 100vw - 2rem);
+  }
+}
+
+/* Main stopwatch panel – smaller circle in the center of #root, scales with #root */
+.stopwatch-panel {
+  @apply bg-amber-100 border-2 border-amber-400 rounded-full shadow-xl;
+  @apply text-amber-900 flex flex-col items-center justify-center;
+
+  width: 72%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  padding: 1rem; /* 16px – base */
+
+  @media (width >= 640px) {
+    padding: 1.25rem;
+  }
+
+  @media (width >= 768px) {
+    padding: 1.5rem;
+  }
+
+  @media (width >= 1024px) {
+    padding: 2rem;
+  }
+
+  @media (width >= 1280px) {
+    padding: 2.25rem;
+  }
+
+  @media (width >= 1536px) {
+    padding: 2.5rem;
+  }
+}
