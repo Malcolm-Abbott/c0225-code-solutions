@@ -1,0 +1,5 @@
+@import url('tailwindcss');
+
+.search-bar-card {
+  @apply bg-gray-300 rounded-lg shadow-md px-8 py-24 mx-8;
+}
