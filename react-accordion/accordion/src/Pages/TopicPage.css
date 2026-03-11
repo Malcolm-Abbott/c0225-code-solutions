@@ -1,0 +1,23 @@
+@import url('tailwindcss');
+
+.topic-page {
+  @apply flex flex-wrap justify-center items-center min-h-screen;
+
+  min-height: 100dvh;
+}
+
+.topic-card {
+  @apply bg-gray-300 rounded-lg shadow-md px-8 py-24 mx-8 min-w-108 max-w-108 min-h-108 max-h-108;
+
+  @media (width >= 768px) {
+    @apply min-w-140 max-w-140 min-h-98 max-h-98;
+  }
+
+  @media (width >= 1024px) {
+    @apply min-w-172 max-w-172 min-h-98 max-h-98;
+  }
+}
+
+.topic-item {
+  @apply border-b border-gray-400;
+}
