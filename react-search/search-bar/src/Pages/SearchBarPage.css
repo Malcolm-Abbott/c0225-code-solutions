@@ -1,0 +1,7 @@
+@import url('tailwindcss');
+
+.search-bar-page {
+  @apply flex justify-center items-center min-h-screen;
+
+  min-height: 100dvh;
+}
