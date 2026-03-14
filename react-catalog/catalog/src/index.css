@@ -1,1 +1,9 @@
 @import url('tailwindcss');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply m-0;
+}

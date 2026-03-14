@@ -2,6 +2,7 @@ import { readCatalog } from '../../../../lib/read';
 import { useState, useEffect } from 'react';
 import type { Product } from '../../../../lib/read';
 import { toDollars } from '../../../../lib/to-dollars';
+import { Link } from 'react-router-dom';
 
 export function ProductsList() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -36,7 +37,9 @@ export function ProductsList() {
   return (
     <ul className="products-list">
       {products.map((product) => (
-        <ProductCard key={product.productId} product={product} />
+        <Link to={`/item/${product.productId}`} key={product.productId}>
+          <ProductCard key={product.productId} product={product} />
+        </Link>
       ))}
     </ul>
   );
