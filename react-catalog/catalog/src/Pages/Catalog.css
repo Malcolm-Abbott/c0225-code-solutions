@@ -1,0 +1,22 @@
+@import url('tailwindcss');
+
+.catalog-container {
+  @apply px-16 py-6 min-h-screen;
+
+  min-height: 100dvh;
+
+  @apply flex flex-col gap-4;
+}
+
+.catalog-card {
+  @apply p-4 border border-gray-300 rounded-lg shadow-md cursor-pointer min-h-[480px];
+  @apply grid grid-cols-1 gap-3;
+}
+
+.catalog-card-image-wrapper {
+  @apply w-[260px] h-[260px] mx-auto border border-gray-200 rounded-lg;
+}
+
+.catalog-card-image-wrapper > img {
+  @apply w-full h-full object-contain;
+}
