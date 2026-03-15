@@ -1,0 +1,17 @@
+@import url('tailwindcss');
+
+.product-container {
+  @apply px-6 py-6 min-h-screen;
+
+  min-height: 100dvh;
+}
+
+.product-card {
+  @apply border border-gray-300 rounded-lg shadow-md p-4;
+  @apply flex flex-col gap-2;
+}
+
+.product-card-image-wrapper {
+  @apply max-w-[min(90vw,380px)];
+  @apply border border-gray-200 rounded-lg;
+}
